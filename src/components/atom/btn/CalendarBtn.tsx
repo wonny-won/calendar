@@ -7,12 +7,13 @@ interface BtnCompProps {
 	btnText?: string | number;
 	children?: ReactNode;
 	onClickFn?: () => boolean | void;
+	isBody?: boolean;
 	style?: {};
 }
 
 const CalendarBtn = (props: BtnCompProps) => {
 	return (
-		<S.CommonBtn style={props.style} onClick={props.onClickFn}>
+		<S.CommonBtn style={props.style} onClick={props.onClickFn} isBody={props.isBody}>
 			{props.btnText || props.children}
 		</S.CommonBtn>
 	);
