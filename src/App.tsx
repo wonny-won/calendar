@@ -1,7 +1,7 @@
 /** @format */
 
 import { RecoilRoot } from 'recoil';
-import MainCalendar from './components/page';
+import MainCalendar from './components/organism/Calendar';
 
 function App() {
 	return (

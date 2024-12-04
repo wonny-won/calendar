@@ -62,3 +62,7 @@ export const getChangedYear = (currDate: string, isPrev: boolean) => {
 	}
 	return `${resYear ?? currYear} . ${currMoth}`;
 };
+
+export const getDaysInMonth = (year: string, month: string) => {
+	return new Date(Number(year), Number(month), 0).getDate();
+};

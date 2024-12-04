@@ -7,10 +7,15 @@ interface BtnCompProps {
 	btnText?: string | number;
 	children?: ReactNode;
 	onClickFn?: () => boolean | void;
+	style?: {};
 }
 
 const CalendarBtn = (props: BtnCompProps) => {
-	return <S.CommonBtn onClick={props.onClickFn}>{props.btnText || props.children}</S.CommonBtn>;
+	return (
+		<S.CommonBtn style={props.style} onClick={props.onClickFn}>
+			{props.btnText || props.children}
+		</S.CommonBtn>
+	);
 };
 
 export default CalendarBtn;
