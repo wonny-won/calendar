@@ -20,7 +20,6 @@ export default function Header() {
 		const resMoth = getChangedMonth(currDate, isPrev);
 		// yaer
 		const resYear = getChangedYear(currDate, isPrev);
-
 		setCurrDate(isChangeMonth ? resMoth : resYear);
 
 		return true;
