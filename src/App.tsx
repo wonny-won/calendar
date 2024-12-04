@@ -1,9 +1,14 @@
 /** @format */
 
+import { RecoilRoot } from 'recoil';
 import MainCalendar from './components/page';
 
 function App() {
-	return <MainCalendar />;
+	return (
+		<RecoilRoot>
+			<MainCalendar />
+		</RecoilRoot>
+	);
 }
 
 export default App;
