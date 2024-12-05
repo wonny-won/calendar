@@ -14,8 +14,14 @@ import { checkedDate } from '../../../commons/recoilAtom';
 export default function Header() {
 	const [currDate, setCurrDate] = useRecoilState(checkedDate);
 
-	// prev, next 버튼 클릭에 따라 global state 변경
-	const changeDate = (isPrev: boolean, isChangeMonth: boolean, btn: string) => {
+	/*****************************************************************
+	 *  prev, next 버튼 클릭에 따라 global state 변경
+	 *
+	 * @param isPrev : prev / next 확인
+	 * @param isChangeMonth : month / year 확인
+	 * @returns
+	 *****************************************************************/
+	const changeDate = (isPrev: boolean, isChangeMonth: boolean) => {
 		// moth
 		const resMoth = getChangedMonth(currDate, isPrev);
 		// yaer
@@ -28,13 +34,13 @@ export default function Header() {
 	return (
 		<S.HeaderWrap>
 			<div>
-				<CalendarBtn children={<PrevYear />} onClickFn={() => changeDate(true, false, 'prevYear')} />
-				<CalendarBtn children={<PrevMonth />} onClickFn={() => changeDate(true, true, 'prevMonth')} />
+				<CalendarBtn children={<PrevYear />} onClickFn={() => changeDate(true, false)} />
+				<CalendarBtn children={<PrevMonth />} onClickFn={() => changeDate(true, true)} />
 			</div>
 			<CheckedDate />
 			<div>
-				<CalendarBtn children={<NextMonth />} onClickFn={() => changeDate(false, true, 'nextMonth')} />
-				<CalendarBtn children={<NextYear />} onClickFn={() => changeDate(false, false, 'nextYear')} />
+				<CalendarBtn children={<NextMonth />} onClickFn={() => changeDate(false, true)} />
+				<CalendarBtn children={<NextYear />} onClickFn={() => changeDate(false, false)} />
 			</div>
 		</S.HeaderWrap>
 	);

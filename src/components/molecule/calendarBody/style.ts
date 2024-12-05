@@ -11,7 +11,7 @@ export const CalendarBodyWrap = styled.div`
 	padding: 0 5px;
 	border: 1px solid #ddd;
 	border-top: none;
-	border-radius: 0 0 8px 8px;
+	border-radius: 0 0 10px 10px;
 `;
 
 export const DayName = styled.div``;

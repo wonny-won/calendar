@@ -6,7 +6,7 @@ import * as S from './style';
 interface BtnCompProps {
 	btnText?: string | number;
 	children?: ReactNode;
-	onClickFn?: () => boolean | void;
+	onClickFn?: (e?: any) => boolean | void;
 	isBody?: boolean;
 	style?: {};
 }
