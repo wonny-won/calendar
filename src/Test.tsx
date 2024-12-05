@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import MainCalendar from './components/organism/Calendar';
+import React from 'react';
 
 export default function TestPage() {
 	const [value, setValue] = useState('');

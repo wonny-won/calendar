@@ -1,5 +1,4 @@
 /** @format */
-
 import styled from '@emotion/styled';
 
 export const CalendarBodyWrap = styled.div`
