@@ -1,0 +1,6 @@
+# 소스 코드 제외
+src/
+
+# 기타 제외할 파일
+node_modules/
+*.log

@@ -1,8 +1,13 @@
 {
-	"name": "how_much",
-	"version": "0.1.0",
-	"private": true,
+	"name": "dev-raccoon-calendar",
+	"version": "1.0.0",
+	"private": false,
 	"dependencies": {
+		"@babel/cli": "^7.25.9",
+		"@babel/core": "^7.26.0",
+		"@babel/preset-env": "^7.26.0",
+		"@babel/preset-react": "^7.26.3",
+		"@babel/preset-typescript": "^7.26.0",
 		"@emotion/react": "^11.13.5",
 		"@emotion/styled": "^11.13.5",
 		"@testing-library/jest-dom": "^5.17.0",
@@ -12,6 +17,7 @@
 		"@types/node": "^16.18.121",
 		"@types/react": "^18.3.12",
 		"@types/react-dom": "^18.3.1",
+		"babel-loader": "^9.2.1",
 		"react": "^18.3.1",
 		"react-dom": "^18.3.1",
 		"react-scripts": "5.0.1",
@@ -21,7 +27,7 @@
 	},
 	"scripts": {
 		"start": "react-scripts start",
-		"build": "react-scripts build",
+		"build": "babel src --out-dir dist --copy-files",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
 		"publish:npm": "rm -rf dist && mkdir dist && babel src/lib -d dist --copy-files"
@@ -43,5 +49,26 @@
 			"last 1 firefox version",
 			"last 1 safari version"
 		]
+	},
+	"description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+	"main": "dist/index.tsx",
+	"devDependencies": {},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/wonny-won/calendar.git"
+	},
+	"keywords": [
+		"calendar"
+	],
+	"author": "Dev raccoon <jaake0704@gmail.com>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/wonny-won/calendar/issues"
+	},
+	"homepage": "https://github.com/wonny-won/calendar#readme",
+	"peerDependencies": {
+		"react": "^18.0.0",
+		"react-dom": "^18.0.0",
+		"recoil": "^0.7.7"
 	}
 }
